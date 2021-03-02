@@ -1,0 +1,9 @@
+<!-- HeaderComponent to be displayed as part of AppComponent -->
+<app-header></app-header>
+
+<div>
+    <button mat-flat-button color="primary" routerLink="/login" routerLinkActive="active">Login</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+</div>
+<!-- Another component to be rendered based on route -->
+<router-outlet></router-outlet>

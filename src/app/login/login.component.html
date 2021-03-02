@@ -1,0 +1,21 @@
+<div class="login-form-container">
+    <div class="jumbotron mt-5">
+      <h2 class="customcss">Login Form</h2>
+    </div>
+  <!-- Label to display any error messages -->
+<label class="error-message">{{ submitMessage }}</label>
+  <form class="login-form" [formGroup]="loginform" (ngSubmit)="loginSubmit(loginform)">
+    <mat-form-field>
+      <input class="username" matInput placeholder="Enter The Username" formControlName="username">
+      <mat-error *ngIf="loginform.get('username')?.touched && loginform.get('username')?.hasError('required')">Email is requied</mat-error>
+      <mat-error *ngIf="loginform.get('username')?.touched && loginform.get('username')?.hasError('minlength')">Length must be 6 character</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input class="password" matInput type="password" placeholder="Enter the Password" formControlName="password">
+      <mat-error *ngIf="loginform.get('password')?.touched && loginform.get('password')?.hasError('required')">password is requied</mat-error>
+      <mat-error *ngIf="loginform.get('password')?.touched && loginform.get('password')?.hasError('minlength')">Length must be 6 character</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="loginform.invalid">Submit</button>
+  </form>
+  </div>
+  

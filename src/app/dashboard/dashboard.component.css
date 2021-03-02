@@ -1,0 +1,26 @@
+.mat-container{
+    width: 50vw;
+    margin: 5vh auto;
+}
+.example-form{
+    display: flex;
+    flex-direction: column;
+}
+.noteslist{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 1em;
+    justify-content:space-around;
+    flex-flow: row wrap;
+    margin-top: 1em !important;
+}
+.mat-card{
+    margin: 1em;
+  }
+.error-message{
+    color: red;
+}
+.mat-card-title{
+    color: blue
+}
